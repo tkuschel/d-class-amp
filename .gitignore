@@ -1,0 +1,6 @@
+# KiCad autosave and backup files
+~*
+_autosave*
+/*-backups/
+# PDF files
+*.pdf
