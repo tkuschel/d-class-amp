@@ -4017,6 +4017,16 @@
 		)
 		(uuid "50a9234f-eacf-43d7-b5c4-139c19f8b592")
 	)
+	(text "PESD5V2S2UT dual ESD diode in SOT23 packag\n\"https://assets.nexperia.com/documents/data-sheet/PESD5V0L1ULD.pdf"
+		(exclude_from_sim no)
+		(at 69.85 108.966 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "530c791c-66f8-4bc9-878f-b381762e1f3d")
+	)
 	(text "X7R, 50V recommended"
 		(exclude_from_sim no)
 		(at 181.356 85.344 0)
@@ -6227,9 +6237,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 226.06 106.68 0)
-			(hide yes)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5015_Micro_Mini"
+			(at 244.856 105.918 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6582,6 +6591,86 @@
 			(project "prel_class_d"
 				(path "/c0ce0048-9cbc-4ef4-b77d-261f9e0788c8"
 					(reference "TP_BAT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PESD5V0L1ULD")
+		(at 66.04 90.17 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3b87ba76-e567-41bf-b63a-76b5a8138fa6")
+		(property "Reference" "D6"
+			(at 68.326 90.17 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PESD5V0U1UA"
+			(at 50.292 90.678 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 60.96 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "\"https://assets.nexperia.com/documents/data-sheet/PESD5V0U1UA.pdf"
+			(at 61.214 113.284 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ultra low capacitance unidirectional ESD protection diode, 5V, SOD-323"
+			(at 73.66 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ee3f7f19-d1df-4a16-8479-88c72c9ee39b")
+		)
+		(pin "2"
+			(uuid "aa7acfb9-3514-4af1-9f76-55347c05d8f0")
+		)
+		(instances
+			(project "prel_class_d"
+				(path "/c0ce0048-9cbc-4ef4-b77d-261f9e0788c8"
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -7077,7 +7166,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "PESD5V0U1BA"
+		(property "Value" "PESD5V0U1UA"
 			(at 76.962 92.964 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7088,7 +7177,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-882D"
+		(property "Footprint" "Diode_SMD:D_SOD-323"
 			(at 69.85 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -7099,9 +7188,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "\"https://assets.nexperia.com/documents/data-sheet/PESD5V0L1ULD.pdf"
-			(at 80.01 90.17 0)
-			(hide yes)
+		(property "Datasheet" "\"https://assets.nexperia.com/documents/data-sheet/PESD5V0U1UA.pdf"
+			(at 70.104 113.284 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7110,7 +7198,7 @@
 				)
 			)
 		)
-		(property "Description" "Low capacitance unidirectional ESD protection diode, 5V, SOD-882D"
+		(property "Description" "Ultra low capacitance unidirectional ESD protection diode, 5V, SOD-323"
 			(at 82.55 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -9367,88 +9455,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:PESD5V0L1ULD")
-		(at 66.04 90.17 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c5528716-9965-48eb-bda7-ff29d89e578f")
-		(property "Reference" "D1"
-			(at 68.58 90.17 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PESD5V0U1BA"
-			(at 62.484 101.6 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-882D"
-			(at 60.96 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "\"https://assets.nexperia.com/documents/data-sheet/PESD5V0L1ULD.pdf"
-			(at 71.12 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Low capacitance unidirectional ESD protection diode, 5V, SOD-882D"
-			(at 73.66 90.17 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9417cdae-5609-4c18-9349-425036b5156c")
-		)
-		(pin "2"
-			(uuid "7418e921-d368-473e-a3fd-179ac86f8906")
-		)
-		(instances
-			(project "prel_class_d"
-				(path "/c0ce0048-9cbc-4ef4-b77d-261f9e0788c8"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 95.25 90.17 180)
 		(unit 1)
@@ -10202,7 +10208,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 175.26 83.82 0)
 			(hide yes)
 			(show_name no)
