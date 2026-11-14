@@ -1,0 +1,41 @@
+name: Build Typst PDF
+
+on:
+  push:
+    # Ohne 'branches'-Einschränkung gilt dies automatisch für jeden Branch
+    paths:
+      - 'hardware/docs/**'
+  # Ermöglicht den manuellen Start über den "Actions"-Tab auf GitHub
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Typst einrichten
+        uses: typst-community/setup-typst@v5
+
+      - name: Dateinamen generieren
+        id: vars
+        run: |
+          SAFE_REF="${GITHUB_REF_NAME//\//-}"
+          SHORT_SHA="${GITHUB_SHA::7}"
+          echo "short_sha=${SHORT_SHA} >> "$GITHUB_OUTPUT"
+          echo "pdf_name=d-class-amp-${SAVE_REF}-${SHORT_SHA}.pdf" >> "$GITHUB_OUTPUT"
+
+      - name: PDF kompilieren
+        run: |
+          typst compile
+          --input git-hash=${{ steps.vars.outputs.short_sha }}
+          hardware/docs/d-class-amp.typ
+          hardware/docs/${{ steps.vars.outputs.pdf_name }}"
+
+      - name: PDF als Artefakt (ungezippt) hochladen
+        uses: actions/upload-artifact@v7
+        with:
+          # name: typst-doc-${{ github.ref_name }}
+          path: hardware/docs/${{ steps.vars.output.pdf_name }}
+          archive: false

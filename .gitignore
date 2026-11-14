@@ -4,3 +4,8 @@ _autosave*
 *-backups/
 # PDF files
 *.pdf
+# Visual Studio / VSCodium
+.vscode
+# no zip files and backup
+*.zip
+*.bak
