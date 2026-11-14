@@ -10,7 +10,8 @@
 
 #set page(
   paper: "a4",
-  margin: (top: 3.5cm, bottom: 2cm, left: 2cm, right: 2cm),
+  margin: (top: 35mm, bottom: 2cm, left: 2cm, right: 2cm),
+  header-ascent: 4mm,
   header: [
     #grid(
       columns: (auto, 1fr, auto),
