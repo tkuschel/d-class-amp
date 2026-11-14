@@ -23,8 +23,8 @@ jobs:
         run: |
           SAFE_REF="${GITHUB_REF_NAME//\//-}"
           SHORT_SHA="${GITHUB_SHA::7}"
-          echo "short_sha=${SHORT_SHA} >> "$GITHUB_OUTPUT"
-          echo "pdf_name=d-class-amp-${SAVE_REF}-${SHORT_SHA}.pdf" >> "$GITHUB_OUTPUT"
+          echo "short_sha=${SHORT_SHA}" >> "$GITHUB_OUTPUT"
+          echo "pdf_name=d-class-amp-${SAFE_REF}-${SHORT_SHA}.pdf" >> "$GITHUB_OUTPUT"
 
       - name: PDF kompilieren
         run: |
