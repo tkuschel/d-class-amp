@@ -28,14 +28,14 @@ jobs:
 
       - name: PDF kompilieren
         run: |
-          typst compile
-          --input git-hash=${{ steps.vars.outputs.short_sha }}
-          hardware/docs/d-class-amp.typ
-          hardware/docs/${{ steps.vars.outputs.pdf_name }}"
+          typst compile \
+          --input git-hash=${{ steps.vars.outputs.short_sha }} \
+          hardware/docs/d-class-amp.typ \
+          hardware/docs/${{ steps.vars.outputs.pdf_name }}
 
       - name: PDF als Artefakt (ungezippt) hochladen
         uses: actions/upload-artifact@v7
         with:
           # name: typst-doc-${{ github.ref_name }}
-          path: hardware/docs/${{ steps.vars.output.pdf_name }}
+          path: hardware/docs/${{ steps.vars.outputs.pdf_name }}
           archive: false
